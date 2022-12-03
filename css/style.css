@@ -13,18 +13,15 @@ html {
     --rojo: #d83a3a;
 }
 
-
-
 body {
     font-family: 'Cairo', sans-serif;
 }
 
-
-
 .container {
-    width: 1200px;
+    width: 1890px;
     padding-left: 15px;
     padding-right: 15px;
+    margin: 0 auto;
 }
 
 .container-full {
@@ -72,8 +69,21 @@ body {
     width: 15%;
 }
 
+.columna-20{
+    width: 20%;
+}
+
 .columna-25 {
     width: 25%;
+}
+
+.columna-27 {
+    width: 27%;
+    margin: 50px;
+}
+
+.columna-30{
+    width: 30%;
 }
 
 .columna-33 {
@@ -430,7 +440,7 @@ body.abierto {
     text-align: center;
     font-size: 30px;
     color: var(--rojo);
-    margin: 10px;
+    margin: 20px;
 }
 
 #estudios p {
@@ -451,6 +461,11 @@ body.abierto {
     position: relative;
     width: 100%;
     height: 100%;
+    padding-bottom: 60%;
+}
+
+#estudios .columna{
+    height: 100%;
 }
 
 #estudios .contenedor-imagen img {
@@ -459,6 +474,7 @@ body.abierto {
     position: absolute;
     width: 100%;
     height: 100%;
+    border-radius: 30px;
 }
 
 #estudios .img-responsive{
