@@ -1,41 +1,38 @@
-
-var alto_menu = $("#menu").innerHeight();
+"use strict"
 
 new WOW().init();
 
-var acciones = 
-{
-    listo:function(){
-        $("#menu .container .barras").click(acciones.desplazar_menu);
-    },
+const body = document.querySelector("body");
+const tramaInicio = document.getElementById("carga");
+const header = document.getElementById("menu");
+const btn = document.querySelector(".barras");
+const menu = document.querySelector(".menu");
 
-    desplazar_menu:function(e){
-        e.preventDefault();
-        $("#menu nav").toggleClass("abierto");
-        $("body").toggleClass("abierto");
-        $(this).find("i").toggleClass("fa-close")
-    },
+addEventListener("load",e=>{
+    tramaInicio.style.animation = "desaparecer .5s forwards";
+    setTimeout(()=>{
+        tramaInicio.style.display = "none";
+    },1100)
+    
+})
 
-    oscurecer_menu:function(){
-        if(alto_menu < $(window).scrollTop()){
-            $("#menu").addClass("fondo");
-        }else{
-            $("#menu").removeClass("fondo");
-        }
-    },
+addEventListener("scroll",()=>{
+    var y = window.scrollY;
+    console.log(y);
+    if(y > 250){
+        header.style.background = "rgba(0,0,0,.35)";
+    }
+    else{
+        header.style.background = "none";
+    }
+})
 
-    precarga:function(){
-		$(".trama-inicio").fadeOut("slow");
-        $(".box-image-trama").fadeOut("slow");
-		$("body").removeClass("abierto");
-		
-	},
+btn.addEventListener("click",e=>{
+    e.preventDefault();
+    menu.classList.toggle("abierto");
+    body.classList.toggle("abierto");
 
-}
+})
 
-$(window).scroll(acciones.oscurecer_menu);
-$(window).scroll(acciones.whatsapp);
 
-$(document).ready(acciones.listo);
-$(document).ready(acciones.precarga);
 
