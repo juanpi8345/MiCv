@@ -17,8 +17,13 @@ body {
     font-family: 'Cairo', sans-serif;
 }
 
+header{
+    transition: background 1s ease;
+}
+
+
 .container {
-    width: 1890px;
+    width: 90%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -31,8 +36,8 @@ body {
 }
 
 .seccion {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 
@@ -94,6 +99,12 @@ body {
     width: 50%;
 }
 
+.columna-60 {
+    width: 60%;
+}
+
+
+
 .columna-100 {
     width: 100%;
 }
@@ -101,7 +112,7 @@ body {
 .titulos {
     text-align: center;
     font-size: 37px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     color: var(--rojo);
 }
 
@@ -175,17 +186,32 @@ body {
     color: #005895;
 }
 
+.java{
+    color: #6EA9E0;
+}
+
 .instagram {
     color: #B83CB6;
 }
 
+.bootstrap{
+    color: #59287a
+}
+
+.sql{
+    color: #2A95FF;
+}
+
+.cmd{
+    color: orange;
+}
 .pie {
     font-size: 15px;
     font-style: italic;
 }
 
 .border-right {
-    border-right: 3px solid #000;
+    border-right: 2px solid #000;
 }
 
 .border-left {
@@ -255,7 +281,60 @@ body.abierto {
     transform: translate(-50%,-50%);
 }
 
+.skills-box{
+    border-right: 2px solid #000;
+}
 
+iconify-icon{
+    font-size: 90px;
+    padding: 5px 0px;
+}
+
+.no-border-right{
+    border-right: none;
+}
+
+.box-perfil img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: all 1s ease;
+    object-position: center;
+}
+
+.box-perfil{
+    margin-bottom: 30px;
+}
+
+.align-self{
+    align-self: center;
+}
+
+.img-inicio{
+    animation: palpitar 2s infinite;
+}
+
+.trama-inicio{
+    transition: all 2s ease;
+}
+
+
+@keyframes desaparecer{
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 0;
+        display: none;
+        
+    }
+}
 
 @keyframes palpitar {
     0% {
@@ -289,9 +368,8 @@ body.abierto {
     display: flex;
     justify-content: space-around;
     align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #menu nav a {
@@ -306,10 +384,12 @@ body.abierto {
     transform: scale(1.2);
 }
 
-#menu h2 {
+#menu h1 {
     color: #fff;
     font-size: 27px;
     text-shadow: 4px 4px 5px var(--rojo);
+    letter-spacing: 2px;
+    z-index: 10;
 }
 
 #menu nav a {
@@ -382,114 +462,49 @@ body.abierto {
     background-color: transparent;
 }
 
-#sobre-mi .box:hover img {
-    transform: scale(1.3);
-}
-
-#sobre-mi img {
-    object-fit: cover;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    transition: all 1s ease;
-    border: 1px solid var(--rojo);
-    object-position: center;
-}
-
-#sobre-mi .box {
-    background-color: transparent;
-    background-image: linear-gradient(350deg, #304568 69%, #C14B4B 100%);
-    padding: 30px;
-    border-radius: 30px;
-    color: #fff;
-}
-
-#sobre-mi .box h4 {
-    font-size: 25px;
-    color: #FCAAAA;
-}
-
-#sobre-mi .box p {
-    font-style: italic;
-    font-size: 15px;
-    line-height: 1.5;
-    letter-spacing: .8px;
+#sobre-mi{
+    position: relative;
+  
 }
 
 
+#sobre-mi p{
+    font-size: 16px;
+    line-height: 1.3;
+}
 
-#sobre-mi .box p::first-letter {
-    font-size: 20px;
-    color: #ccc;
+#sobre-mi .about-me{
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+#sobre-mi  p::first-letter {
+    font-size: 18px;
+    color: #000;
+}
+
+#habilidades{
+    background-color: #EFE9C7;
 }
 
 #habilidades i {
-    font-size: 125px;
+    font-size: 98px;
     transition: all .7s ease;
 }
 
 #habilidades h4 {
     color: var(--rojo);
+    margin-top: 10px;
 }
 
 #habilidades i:hover {
     transform: scale(1.2);
 }
 
-#estudios h4 {
-    text-align: center;
-    font-size: 30px;
-    color: var(--rojo);
-    margin: 20px;
-}
-
-#estudios p {
-    font-size: 20px;
-    text-align: center;
-    font-style: italic;
-    margin: 10px;
-}
-
-#estudios h5 {
-    text-align: center;
-    font-size: 15px;
-    color: var(--rojo);
-    margin: 10px;
-}
-
-#estudios .contenedor-imagen {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 60%;
-}
-
-#estudios .columna{
-    height: 100%;
-}
-
-#estudios .contenedor-imagen img {
-    object-position: center;
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-}
-
-#estudios .img-responsive{
-    display: none;
-}
-
-#estudios .columna-height {
-    height: 300px;
-}
-
-#estudios .estudios-box {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
+#proyectos{
+    background-image: url(../img/trama.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
 }
 
 #proyectos .contenedor-cuadrado {
@@ -497,9 +512,9 @@ body.abierto {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.61);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.61);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.61);
-    width: 75%;
+    width: 70%;
     border-radius: 15px;
-    padding-bottom: 60%;
+    padding-bottom: 55%;
     overflow: hidden;
     cursor: pointer;
     height: 100%;
@@ -508,7 +523,6 @@ body.abierto {
 #proyectos .columna-33 {
     display: flex;
     justify-content: center;
-    padding-top: 60px;
     padding-bottom: 60px;
 }
 
@@ -523,8 +537,8 @@ body.abierto {
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    object-fit: cover;
     object-position: center;
+    object-fit: cover;
 }
 
 #proyectos .contenido-cuadrado {
@@ -564,6 +578,10 @@ body.abierto {
 
 #proyectos a:hover {
     background-color: transparent;
+}
+
+#contacto{
+    background-color: #EFE9C7;
 }
 
 #contacto i {
@@ -625,10 +643,61 @@ h4 {
     color: #fff;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1500px){
+    #proyectos .contenedor-cuadrado{
+        width: 85%;
+        padding-bottom: 70%;
+    }
+}
+
+@media(max-width: 1200px){
+
+    #habilidades i{
+        font-size: 78px;
+    }
+
+    iconify-icon{
+        font-size: 70px;
+    }
+
+    #proyectos .contenedor-cuadrado{
+        width: 90%;
+        padding-bottom: 75%;
+    }
+
+
+}
+
+@media(max-width: 950px) {
+
+    #habilidades i,iconify-icon{
+        padding-top: 30px;
+    }
+
+    #habilidades i{
+        font-size: 87px;
+    }
+
+    #habilidades iconify-icon{
+        font-size: 79px;
+    }
+
+    #proyectos .contenedor-cuadrado{
+        width: 50%;
+        padding-bottom: 35%;
+    }
 
     .container {
         width: 100%;
+    }
+
+    .border-mb{
+        border-right: none;
+        border-bottom: 1px solid #000;
+    }
+
+    .no-border-mb{
+        border: none;
     }
 
     .columna-mb-100 {
